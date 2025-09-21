@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>Scuff Press</h1>
+      <h1 className="text-sm bg-grey underline">Scuff Press</h1>
     </>
   );
 }
