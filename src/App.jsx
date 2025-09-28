@@ -1,12 +1,24 @@
 import { useState } from "react";
-import "./App.css";
+import { Routes, Route } from "react-router";
+
+import Home from "./pages/Home";
+import Features from "./pages/Features";
+import BuyStuff from "./pages/BuyStuff";
+import Interviews from "./pages/Interviews";
+import TipUs from "./pages/TipUs";
+import About from "./pages/About";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1 className="text-sm bg-grey underline">Scuff Press</h1>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="features" element={<Features />} />
+        <Route path="interviews" element={<Interviews />} />
+        <Route path="about" element={<About />} />
+        <Route path="store" element={<BuyStuff />} />
+        <Route path="patronage" element={<TipUs />} />
+      </Routes>
     </>
   );
 }
