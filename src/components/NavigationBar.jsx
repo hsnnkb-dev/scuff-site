@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router";
-import SCUFF_SNAKE from "../assets/Branding/scuff-snake-original.jpeg";
+import SCUFF_SNAKE from "../assets/branding/scuff-snake-original.jpeg";
 
 export default function NavigationBar() {
   return (
