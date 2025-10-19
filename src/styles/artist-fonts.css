@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Yaow-No-Cameo';
+  src: local("Yaow-No-Cameo") url("../assets/fonts/artist-fonts/Yaow-No-Cameo.ttf") format('ttf');
+}
+
+.no-cameo {
+  font-family: "Yaow-No-Cameo", serif;
+}

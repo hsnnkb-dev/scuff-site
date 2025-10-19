@@ -1,5 +1,6 @@
 import { NavLink, Link } from "react-router";
-import SCUFF_SNAKE from "../assets/branding/scuff-snake-original.jpeg";
+import SCUFF_SNAKE from "../assets/branding/scuff-snake-transparent.png";
+import "../styles/branding-fonts.css";
 
 export default function NavigationBar() {
   return (
@@ -8,11 +9,11 @@ export default function NavigationBar() {
         <img
           src={SCUFF_SNAKE}
           alt="tattoo-style snake of the scuff logo"
-          className="h-48"
+          className="h-24 mt-12 mb-6"
         />
       </div>
-      <hr className="mx-4" />
-      <div className="flex gap-2 justify-around">
+      <hr className="mx-4 text-[#737373] opacity-[0.4]" />
+      <div className="flex gap-2 justify-around mt-4 text-lg font-the-seasons">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "underline" : "")}
@@ -35,7 +36,7 @@ export default function NavigationBar() {
           to="/store"
           className={({ isActive }) => (isActive ? "underline" : "")}
         >
-          Buy Stuff
+          Scuff Stuff
         </NavLink>
         <NavLink
           to="/patronage"

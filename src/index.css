@@ -1,4 +1,25 @@
+@font-face {
+  font-family: The Seasons Regular;
+  src: url("./assets/fonts/site-fonts/the-seasons/theseasons-reg.otf");
+}
+
+@font-face {
+  font-family: Wednesday;
+  src: url("./assets/fonts/site-fonts/wednesday-canva/Wednesday.otf");
+}
+
+@font-face {
+  font-family: Yaow;
+  src: url("./assets/fonts/artist-fonts/Yaow-No-Cameo.otf");
+}
+
 @import "tailwindcss";
+
+@theme {
+  --font-the-seasons: The Seasons Regular, "serif";
+  --font-wednesday: Wednesday, "sansserif";
+  --font-yaow: Yaow, "serif";
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

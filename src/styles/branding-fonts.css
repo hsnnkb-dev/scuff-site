@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'The Seasons Regular';
+  src: local("The Seasons Regular") url("../assets/fonts/site-fonts/the-seasons/theseasons-reg.woff") format('woff');
+}
+
+.the-seasons-regular {
+  font-family: "The Seasons Regular"
+}
