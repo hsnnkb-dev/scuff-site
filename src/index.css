@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: The Seasons Italic;
+  src: url("./assets/fonts/site-fonts/the-seasons/theseasons-ltit.otf");
+}
+
+@font-face {
   font-family: Wednesday;
   src: url("./assets/fonts/site-fonts/wednesday-canva/Wednesday.otf");
 }
@@ -17,6 +22,7 @@
 
 @theme {
   --font-the-seasons: The Seasons Regular, "serif";
+  --font-the-seasons-italic: The Seasons Italic, "serif";
   --font-wednesday: Wednesday, "sansserif";
   --font-yaow: Yaow, "serif";
 }

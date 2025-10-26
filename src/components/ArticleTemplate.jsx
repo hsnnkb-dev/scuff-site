@@ -1,8 +1,17 @@
 import React from "react";
 import "../styles/poppins-font.css";
 
+// TODO: Multiple stylings inside of title, e.g. italic and regular
 function ArticleTitle({ title }) {
   const titleStyling = "title font-the-seasons text-5xl mb-4";
+  const italicTitleStyling = "font-the-seasons-italic";
+
+  // show in-person
+  // return (
+  //   <h1 className={titleStyling}>
+  //     <span className={italicTitleStyling}>No Cameo</span>, No Problem
+  //   </h1>
+  // );
 
   return <h1 className={titleStyling}>{title}</h1>;
 }
@@ -15,23 +24,32 @@ function ArticleIntroduction({ paragraphs }) {
   return { paragraphs };
 }
 
-export default function ArticleTemplate() {
-  const artistCommentStyling = "mb-2";
-  const artistNameStyling = "font-the-seasons text-lg";
-  const katCommentStyling = "font-the-seasons text-lg my-2";
-  const subtitleStyling = "title font-the-seasons text-2xl mb-2";
-  const sectionStyling = "poppins-extralight max-w-[67%] mb-6";
+function ArticleSection({ content }) {
+  const sectionContainerStyling = "poppins-extralight max-w-[75%] mb-6";
+  const sectionSubtitleStyling = "title font-the-seasons text-2xl mb-2";
+  const sectionContentStyling = "";
 
   const ArtistComment = (
     <p className={artistCommentStyling}>
       <span className={artistNameStyling}></span>:
     </p>
   );
+}
+
+export default function ArticleTemplate() {
+  const artistCommentStyling = "mb-4";
+  const artistNameStyling = "font-the-seasons text-lg";
+  const katCommentStyling = "font-the-seasons text-lg my-4";
+  const subtitleStyling = "title font-the-seasons text-xl mb-2";
+
+  const sectionStyling = "poppins-extralight max-w-[75%] mb-12";
+  const sectionSubtitleStyling = "title font-the-seasons text-2xl mb-2";
+  const sectionContentStyling = "";
 
   return (
-    <main className="p-6 mx-4">
+    <main className="p-4 mx-8 ml-12">
       <ArticleTitle title="No Cameo, No Problem" />
-      <div className="poppins-extralight max-w-[67%] mb-6 leading-[144%]">
+      <div className="poppins-extralight max-w-[67%] mb-8 leading-[144%]">
         <p className="mb-2">
           <span className="font-wednesday text-2xl">I</span>n the run up to the
           release of their new single, ‘Win a Fortune’, I caught up with
@@ -68,16 +86,16 @@ export default function ArticleTemplate() {
         </div>
 
         <p>
-          <span className="font-the-seasons text-lg">AJ</span>: Essentially,
-          we're an art punk band. The name came about because we try to keep
-          everything in-house, between us and our friends. No Cameo isn’t for
-          anyone else, it’s about us, and it’s about an unconventional, arty
-          approach to music.
+          <span className={artistNameStyling}>AJ</span>: Essentially, we're an
+          art punk band. The name came about because we try to keep everything
+          in-house, between us and our friends. No Cameo isn’t for anyone else,
+          it’s about us, and it’s about an unconventional, arty approach to
+          music.
         </p>
       </div>
 
-      <div className="poppins-extralight max-w-[67%] mb-6">
-        <div className="title font-the-seasons text-2xl mb-2">
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
           <h2>
             Tell me about your new single, ‘Win a Fortune’{" "}
             <span className="poppins-extralight">-</span> what’s it all about?
@@ -85,24 +103,24 @@ export default function ArticleTemplate() {
         </div>
 
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">AJ</span>: The single’s
-          about dating in the LGBTQ+ scene. We have a chant for it at gigs - I’m
+          <span className={artistNameStyling}>AJ</span>: The single’s about
+          dating in the LGBTQ+ scene. We have a chant for it at gigs - I’m
           trying to make it a thing - where I get everyone to shout “men ain’t
           shit” beforehand. Essentially, I’d say it's the most conventional song
           we have in our set.
         </p>
 
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Mag</span>: It’s the only
-          song that survived our experimentation phase, our ‘phase one’. All the
+          <span className={artistNameStyling}>Mag</span>: It’s the only song
+          that survived our experimentation phase, our ‘phase one’. All the
           other songs have been axed and cut.
         </p>
 
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Miles</span>: We spent a
-          long time finding our sound, and sometimes thinking that [our first
-          iteration] was our sound. And then we realised that we can do better -
-          but that’s the song that stayed throughout all that.
+          <span className={artistNameStyling}>Miles</span>: We spent a long time
+          finding our sound, and sometimes thinking that [our first iteration]
+          was our sound. And then we realised that we can do better - but that’s
+          the song that stayed throughout all that.
         </p>
 
         <p className={artistCommentStyling}>
@@ -111,7 +129,7 @@ export default function ArticleTemplate() {
           indie sound, and it’s not an indie song.
         </p>
 
-        <p className="font-the-seasons my-2">
+        <p className={katCommentStyling}>
           No, it's definitely not an indie song. I think if it was going to be
           on Spotify they'd probably just label it as ‘alternative’ because they
           wouldn't know how to categorise it.
@@ -123,19 +141,19 @@ export default function ArticleTemplate() {
         </p>
       </div>
 
-      <div className="poppins-extralight max-w-[67%] mb-6">
-        <div className="title font-the-seasons text-2xl mb-2">
+      <div className={sectionStyling}>
+        <div className={sectionSubtitleStyling}>
           <h2>
             Who are some of your biggest influences, both as individuals and as
             a band?{" "}
           </h2>
         </div>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Mag</span>: I’ve always
-          been a right little pop-head. So, growing up for me, it was 21 Pilots,
-          Fall Out Boy, and Gorillaz. I wouldn’t say those bands carry through
-          to my influences for No Cameo, but growing up, those were my three
-          core bands. As for my influences for No Cameo? I shut up and be a bass
+          <span className={artistNameStyling}>Mag</span>: I’ve always been a
+          right little pop-head. So, growing up for me, it was 21 Pilots, Fall
+          Out Boy, and Gorillaz. I wouldn’t say those bands carry through to my
+          influences for No Cameo, but growing up, those were my three core
+          bands. As for my influences for No Cameo? I shut up and be a bass
           player!
         </p>
         <p className={artistCommentStyling}>
@@ -147,28 +165,28 @@ export default function ArticleTemplate() {
           off of that idea and follow them as the leader.
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">AJ</span>: We’ve realised
-          that we’re not a band that jamming works for. We don’t describe things
-          as ‘verse’, ‘chorus’ or whatever. We’ve changed it to sections, so
-          it’s a bit more free flow. It means that if we have at least three
+          <span className={artistNameStyling}>AJ</span>: We’ve realised that
+          we’re not a band that jamming works for. We don’t describe things as
+          ‘verse’, ‘chorus’ or whatever. We’ve changed it to sections, so it’s a
+          bit more free flow. It means that if we have at least three
           established sections and we’ve written something, we bring those in
           and we kind of shape it from there.{" "}
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Mag</span>: We're trying to
-          escape the norms of popular music.
+          <span className={artistNameStyling}>Mag</span>: We're trying to escape
+          the norms of popular music.
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">AJ</span>: I’m glad you
-          told us what your influences were though, Mag. So, 21 Pilots and Fall
-          Out Boy…?!
+          <span className={artistNameStyling}>AJ</span>: I’m glad you told us
+          what your influences were though, Mag. So, 21 Pilots and Fall Out
+          Boy…?!
         </p>
         <p className={katCommentStyling}>
           We can’t just do Mag’s, I need to hear everybody else's!
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Miles</span>: Oh, where do
-          I start?! I mean, I didn't get into music until a bit later, so that’s
+          <span className={artistNameStyling}>Miles</span>: Oh, where do I
+          start?! I mean, I didn't get into music until a bit later, so that’s
           probably the embarrassing bit - I just pretended to listen to music.
           And then…I listened to Nickelback in the car, and Fall Out Boy was the
           first tape that I got. It was then that I became conscious.
@@ -178,24 +196,24 @@ export default function ArticleTemplate() {
           interview.
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Miles</span>: We’re a Fall
-          Out Boy band!
+          <span className={artistNameStyling}>Miles</span>: We’re a Fall Out Boy
+          band!
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Mag</span>: Fall Out Boy
-          covers band, here we go!
+          <span className={artistNameStyling}>Mag</span>: Fall Out Boy covers
+          band, here we go!
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Miles</span>: 2000s music
-          though, I wasn’t too into that. I dug into the 90s, 80s to 60s, and
-          then I realised that there's so much more to music than what's
-          happening right now. Going forward, you need to look back, not just to
-          what you listened to, but what your parents listened to.
+          <span className={artistNameStyling}>Miles</span>: 2000s music though,
+          I wasn’t too into that. I dug into the 90s, 80s to 60s, and then I
+          realised that there's so much more to music than what's happening
+          right now. Going forward, you need to look back, not just to what you
+          listened to, but what your parents listened to.
         </p>
         <p className={katCommentStyling}>How about you, AJ?</p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">AJ</span>: Back in the day,
-          the first album I ever bought was Demon Days by Gorillaz, so it was
+          <span className={artistNameStyling}>AJ</span>: Back in the day, the
+          first album I ever bought was Demon Days by Gorillaz, so it was
           alternative straight away. I did have my dalliances with Fall Out Boy,
           because my sister was really obsessed with them, and a lot of what I
           listened to growing up was a mix between what my parents liked and
@@ -203,22 +221,22 @@ export default function ArticleTemplate() {
           fuck with The Doors, love James Brown, and Gorillaz obviously.
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Miles</span>: [To AJ] We
-          want embarrassing music!
+          <span className={artistNameStyling}>Miles</span>: [To AJ] We want
+          embarrassing music!
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">AJ</span>: Well, I went and
-          saw Back Veil Brides play a gig once. I actually saw them four times.
-          I really liked hair metal as a kid, so they were like a hair metal
-          band that didn’t look ancient that I could go and see. In terms of
-          bands that influence what we do now, I’d say maybe Interpol is a
-          massive one, and 90s emotional hardcore stuff like Orchid, Rites of
-          Spring, or Fugazi.
+          <span className={artistNameStyling}>AJ</span>: Well, I went and saw
+          Back Veil Brides play a gig once. I actually saw them four times. I
+          really liked hair metal as a kid, so they were like a hair metal band
+          that didn’t look ancient that I could go and see. In terms of bands
+          that influence what we do now, I’d say maybe Interpol is a massive
+          one, and 90s emotional hardcore stuff like Orchid, Rites of Spring, or
+          Fugazi.
         </p>
         <p className={artistCommentStyling}>
-          <span className="font-the-seasons text-lg">Mag</span>: More in the
-          Leeds local scene, we’ve been looking at a couple of bands like The
-          113 and Mince.
+          <span className={artistNameStyling}>Mag</span>: More in the Leeds
+          local scene, we’ve been looking at a couple of bands like The 113 and
+          Mince.
         </p>
       </div>
 
@@ -473,6 +491,115 @@ export default function ArticleTemplate() {
           watch it, by the way, because the Beatles are shit. I think unless you
           grew up on The Beatles, you don’t really give a shit about them.
         </p>
+      </div>
+
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
+          <h2>We’re going to play “This or That.” Virtuous or Guiness?</h2>
+        </div>
+        <div className={sectionContentStyling}>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>All</span>: Guinness
+          </p>
+        </div>
+      </div>
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
+          <h2>Spotify or Apple music?</h2>
+        </div>
+        <div className={sectionContentStyling}>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>Mag</span>: Spotify's just
+            changed their terms and agreements, and they can get fucked now.
+            They own your songs now as soon as you submit them.
+          </p>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>AJ</span>: Apple Music
+          </p>
+        </div>
+      </div>
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
+          <h2>Cats or Dogs?</h2>
+        </div>
+        <div className={sectionContentStyling}>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>AJ & Mag</span>: Dogs
+          </p>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>Miles</span>: Agnostic! I’ve
+            only ever owned a cat.
+          </p>
+        </div>
+      </div>
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
+          <h2>ADHD or Autism?</h2>
+        </div>
+        <div className={sectionContentStyling}>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>AJ</span>: Well, you’ve got ADHD
+            [points at Mag], and I’ve clearly got autism.
+          </p>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>Miles</span>: And I’ve been
+            diagnosed by other people as having both.
+          </p>
+        </div>
+      </div>
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
+          <h2>North or South?</h2>
+        </div>
+        <div className={sectionContentStyling}>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>AJ & Mag</span>: North
+          </p>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>Miles</span>: South, south all
+            the way baby!
+          </p>
+        </div>
+      </div>
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
+          <h2>
+            Obviously, this is the most important question - Israel or
+            Palestine?
+          </h2>
+        </div>
+        <div className={sectionContentStyling}>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>All</span>: Palestine!
+          </p>
+        </div>
+      </div>
+      <div className={sectionStyling}>
+        <div className={subtitleStyling}>
+          <h2>
+            Is there anything else you’d like to talk about before we end this
+            interview?
+          </h2>
+        </div>
+        <div className={sectionContentStyling}>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>AJ</span>: Our new single is out
+            on the 3rd October, and we’re planning after the New Year to release
+            an EP. We've been in the studio recording that.
+          </p>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>Mag</span>: We've got lots of
+            future plans, too. We’re playing Live at Leeds in the City on
+            November 15th, on the Leeds Beckett Stage.
+          </p>
+          <p className={artistCommentStyling}>
+            <span className={artistNameStyling}>Miles</span>: I think with every
+            band, you're kind of living in the future of what your sound will be
+            like, so it’s exciting to be at that point where we have the future
+            things planned. And we know that it is - at least to us - even
+            better than how it is right now.
+          </p>
+        </div>
       </div>
     </main>
   );
