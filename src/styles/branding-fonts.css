@@ -6,3 +6,25 @@
 .the-seasons-regular {
   font-family: "The Seasons Regular"
 }
+
+/* The seasons fonts */
+.theseasonsbold {
+    font-family: "The Seasons Bd";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.theseasonsregular {
+    font-family: "The Seasons Reg";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.theseasonslight {
+    font-family: "The Seasons Lt";
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+}

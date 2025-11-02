@@ -1,19 +1,46 @@
 import React from "react";
+
+import ArtistOverviewCard from "./article/ArtistOverviewCard";
+
+// Styling and Assets
+import PUNK_ICON from "../assets/branding/icons/necklace.png";
+import "../styles/branding-fonts.css";
 import "../styles/poppins-font.css";
 
 // TODO: Multiple stylings inside of title, e.g. italic and regular
 function ArticleTitle({ title }) {
   const titleStyling = "title font-the-seasons text-5xl mb-4";
-  const italicTitleStyling = "font-the-seasons-italic";
+  const boldTitleStyling = "theseasonsbold";
+  const lightTitleStyling = "theseasonslight";
 
   // show in-person
-  // return (
-  //   <h1 className={titleStyling}>
-  //     <span className={italicTitleStyling}>No Cameo</span>, No Problem
-  //   </h1>
-  // );
+  return (
+    <h1 className={titleStyling}>
+      {/* <p className={boldTitleStyling}>No Cameo, No problem</p> */}
+      <p>No Cameo, No problem</p>
+      {/* <p className={lightTitleStyling}>No Cameo, No problem</p> */}
+    </h1>
+  );
 
   return <h1 className={titleStyling}>{title}</h1>;
+}
+
+function Byline({ author, date, genre }) {
+  const bylineStyling =
+    "font-the-seasons-light flex justify-between max-w-[50%] mb-4";
+  const genreStyling = "flex align-center text-[#C0272A]";
+
+  return (
+    <div className={bylineStyling}>
+      <p>By Katherine Barnett</p>
+      <p>31 October 2025</p>
+      <p className={genreStyling}>
+        <img src={PUNK_ICON} className="h-6 mx-1" />
+        Punk
+      </p>
+      {/* TODO: Add comments section and functionality */}
+    </div>
+  );
 }
 
 // TODO: Finish off paragraphs structure and add links into the text
@@ -37,6 +64,7 @@ function ArticleSection({ content }) {
 }
 
 export default function ArticleTemplate() {
+  // TODO: Fix font the seasons
   const artistCommentStyling = "mb-4";
   const artistNameStyling = "font-the-seasons text-lg";
   const katCommentStyling = "font-the-seasons text-lg my-4";
@@ -47,11 +75,12 @@ export default function ArticleTemplate() {
   const sectionContentStyling = "";
 
   return (
-    <main className="p-4 mx-8 ml-12">
+    <main className="p-4 mx-8 ml-32">
       <ArticleTitle title="No Cameo, No Problem" />
+      <Byline />
       <div className="poppins-extralight max-w-[67%] mb-8 leading-[144%]">
         <p className="mb-2">
-          <span className="font-wednesday text-2xl">I</span>n the run up to the
+          <span className="font-wednesday text-4xl">I</span>n the run up to the
           release of their new single, ‘Win a Fortune’, I caught up with
           up-and-coming Leeds band No Cameo, braving a rainstorm to chat in the
           rustic Fenton pub. The venue was the choice of rhythm guitarist and
@@ -79,6 +108,8 @@ export default function ArticleTemplate() {
         </p>
       </div>
 
+      <ArtistOverviewCard />
+
       <div className={sectionStyling}>
         <div className={subtitleStyling}>
           <h2>Who and what is No Cameo?</h2>
@@ -97,8 +128,8 @@ export default function ArticleTemplate() {
       <div className={sectionStyling}>
         <div className={subtitleStyling}>
           <h2>
-            Tell me about your new single, ‘Win a Fortune’{" "}
-            <span className="poppins-extralight">-</span> what’s it all about?
+            Tell me about your new single, ‘Win a Fortune’ - what’s it all
+            about?
           </h2>
         </div>
 
