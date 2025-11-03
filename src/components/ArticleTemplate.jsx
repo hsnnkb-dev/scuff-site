@@ -75,7 +75,7 @@ export default function ArticleTemplate() {
   const sectionContentStyling = "";
 
   return (
-    <main className="p-4 mx-8 ml-32">
+    <main className="p-4 mx-8 ml-32 mt-24">
       <ArticleTitle title="No Cameo, No Problem" />
       <Byline />
       <div className="poppins-extralight max-w-[67%] mb-8 leading-[144%]">
@@ -629,6 +629,13 @@ export default function ArticleTemplate() {
             like, so it’s exciting to be at that point where we have the future
             things planned. And we know that it is - at least to us - even
             better than how it is right now.
+          </p>
+        </div>
+        <div className="my-8">
+          <p className="text-lg">
+            No Cameo’s latest single, ‘Win A Fortune’, is out now on all
+            streaming platforms. You can catch them playing Live at Leeds in the
+            City on November 15th.{" "}
           </p>
         </div>
       </div>
