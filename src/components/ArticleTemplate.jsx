@@ -80,7 +80,7 @@ export default function ArticleTemplate() {
       <Byline />
       <div className="poppins-extralight max-w-[67%] mb-8 leading-[144%]">
         <p className="mb-2">
-          <span className="font-wednesday text-4xl">I</span>n the run up to the
+          <span className="font-wednesday text-5xl">I</span>n the run up to the
           release of their new single, ‘Win a Fortune’, I caught up with
           up-and-coming Leeds band No Cameo, braving a rainstorm to chat in the
           rustic Fenton pub. The venue was the choice of rhythm guitarist and
